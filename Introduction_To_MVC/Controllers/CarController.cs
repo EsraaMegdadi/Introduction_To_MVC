@@ -19,5 +19,10 @@ namespace Introduction_To_MVC.Controllers
         {
             return Content("This path reached  by <h1> Attribute-Based Routing</h1> way");
         }
+        [Route("Car/Display/{id}")]
+        public ActionResult Display(int id)
+        {
+            return Content("<h3>Car ID is </h3><h1>" + id + "</h1>");
+        }
     }
 }
