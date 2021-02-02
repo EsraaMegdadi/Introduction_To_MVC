@@ -11,6 +11,7 @@ namespace Introduction_To_MVC
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.MapMvcAttributeRoutes();
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
           //  routes.IgnoreRoute("Computer/Display ");
 
