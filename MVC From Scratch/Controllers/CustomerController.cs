@@ -18,8 +18,18 @@ namespace MVC_From_Scratch.Controllers
 
         public ActionResult Create()
         {
-            var cust = new Customer();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer cust)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("DisplayCustomer");
+            }
             return View(cust);
+
         }
     }
 }
