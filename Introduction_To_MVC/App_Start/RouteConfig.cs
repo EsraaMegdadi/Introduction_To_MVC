@@ -13,12 +13,12 @@ namespace Introduction_To_MVC
         {
             routes.MapMvcAttributeRoutes();
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-          //  routes.IgnoreRoute("Computer/Display ");
+            //  routes.IgnoreRoute("Computer/Display ");
 
 
             routes.MapRoute(
-                name: "Default",
-                url: "{action}/{controller}/{id}",
+                 name: "Default",
+                 url: "{action}/{controller}/{id}",
                 defaults: new { controller = "Computer", action = "Display", id = UrlParameter.Optional }
             );
         }

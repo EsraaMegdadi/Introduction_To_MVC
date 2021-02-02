@@ -9,20 +9,31 @@ namespace Introduction_To_MVC.Controllers
     public class CarController : Controller
     {
         // GET: Car
-
-         //[Route("Car/Index")]
-          [Route("myCar/Index")]
-          [Route("myCar")]
-          [Route("")]
+        //multiple  Attribute-Based Routing
+        //[Route("Car/Index")]
+        [Route("myCar/Index")]
+        [Route("myCar")]
+        [Route("")]
         public ActionResult Index()
         
         {
             return Content("This path reached  by <h1> Attribute-Based Routing</h1> way");
         }
-        [Route("Car/Display/{id}")]
-        public ActionResult Display(int id)
+
+        //Attribute-Based Routing with parameter 
+        [Route("Car/Details/{id:int}")]
+        public ActionResult Details(int id)
         {
             return Content("<h3>Car ID is </h3><h1>" + id + "</h1>");
         }
+
+        //Routing constraints
+        [Route("Car/Details/{name}")]
+        public ActionResult Details(string name)
+        {
+            return Content("<h3>Car name is </h3>" + name);
+
+        }
+
     }
 }
