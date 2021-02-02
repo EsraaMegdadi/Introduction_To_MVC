@@ -12,6 +12,11 @@ namespace MVC_From_Scratch.Models
         public string  Address { get; set; }
         public int Age  { get; set; }
 
+        //default  constructor
+        public Customer()
+        {
+        }
+
         public Customer(int id, string name, string address, int age)
         {
             Id = id;

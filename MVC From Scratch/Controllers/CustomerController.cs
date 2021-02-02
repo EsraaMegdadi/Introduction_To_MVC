@@ -10,10 +10,16 @@ namespace MVC_From_Scratch.Controllers
     public class CustomerController : Controller
     {
         // GET: Customer
-        public ActionResult DisplayCustomer ()
+        public ActionResult DisplayCustomer()
         {
             var customer = new Customer(1,"Esraa Megdadi","Irbid",25);
             return View(customer);
+        }
+
+        public ActionResult Create()
+        {
+            var cust = new Customer();
+            return View(cust);
         }
     }
 }
